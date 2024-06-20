@@ -1,7 +1,9 @@
-import { Address, beginCell, toNano } from 'ton-core';
-import { buildCollectionContentCell } from './contentUtils/off-chain';
-import { TuneNft } from '../wrappers/TuneNft';
 import { compile, NetworkProvider } from '@ton-community/blueprint';
+import { Address, toNano } from 'ton-core';
+
+import { TuneNft } from '../wrappers/TuneNft';
+
+import { buildCollectionContentCell } from './contentUtils/off-chain';
 
 export async function run(provider: NetworkProvider) {
     const nftCollection = provider.open(

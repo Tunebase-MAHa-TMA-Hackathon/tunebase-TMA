@@ -1,8 +1,10 @@
+import { compile } from '@ton-community/blueprint';
 import { Blockchain, SandboxContract } from '@ton-community/sandbox';
 import { Cell, toNano } from 'ton-core';
-import { NftItem } from '../wrappers/NftItem';
+
 import '@ton-community/test-utils';
-import { compile } from '@ton-community/blueprint';
+
+import { NftItem } from '../wrappers/NftItem';
 
 describe('NftItem', () => {
     let code: Cell;
