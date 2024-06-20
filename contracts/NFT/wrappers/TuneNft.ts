@@ -25,13 +25,16 @@ export function tuneNftConfigToCell(config: TuneNftConfig): Cell {
             beginCell()
                 .storeUint(config.royaltyParams.royaltyFactor, 16)
                 .storeUint(config.royaltyParams.royaltyBase, 16)
-                .storeAddress(config.royaltyParams.royaltyAddress)
+                .storeAddress(config.royaltyParams.royaltyAddress),
         )
-    .endCell();
+        .endCell();
 }
 
 export class TuneNft implements Contract {
-    constructor(readonly address: Address, readonly init?: { code: Cell; data: Cell }) {}
+    constructor(
+        readonly address: Address,
+        readonly init?: { code: Cell; data: Cell },
+    ) {}
 
     static createFromAddress(address: Address) {
         return new TuneNft(address);
@@ -50,8 +53,10 @@ export class TuneNft implements Contract {
             body: beginCell().endCell(),
         });
     }
-    
-    async sendMintNft(provider: ContractProvider, via: Sender,
+
+    async sendMintNft(
+        provider: ContractProvider,
+        via: Sender,
         opts: {
             value: bigint;
             queryId: number;
@@ -59,56 +64,59 @@ export class TuneNft implements Contract {
             itemOwnerAddress: Address;
             itemContent: string;
             amount: bigint;
-        }
-        ) {
-            const nftContent = encodeOffChainContent(opts.itemContent);
-            
-            const nftMessage = beginCell();
-            nftMessage.storeAddress(opts.itemOwnerAddress)
-            nftMessage.storeRef(nftContent)
-            await provider.internal(via, {
-                value: opts.value,
-                sendMode: SendMode.PAY_GAS_SEPARATELY,
-                body: beginCell()
-                    .storeUint(1,32)  // operation
-                    .storeUint(opts.queryId,64)
-                    .storeUint(opts.itemIndex,64)
-                    .storeCoins(opts.amount)
-                    .storeRef(nftMessage)
-                .endCell()
-            })
-        }
+        },
+    ) {
+        const nftContent = encodeOffChainContent(opts.itemContent);
 
-    async sendChangeOwner(provider: ContractProvider, via: Sender,
+        const nftMessage = beginCell();
+        nftMessage.storeAddress(opts.itemOwnerAddress);
+        nftMessage.storeRef(nftContent);
+        await provider.internal(via, {
+            value: opts.value,
+            sendMode: SendMode.PAY_GAS_SEPARATELY,
+            body: beginCell()
+                .storeUint(1, 32) // operation
+                .storeUint(opts.queryId, 64)
+                .storeUint(opts.itemIndex, 64)
+                .storeCoins(opts.amount)
+                .storeRef(nftMessage)
+                .endCell(),
+        });
+    }
+
+    async sendChangeOwner(
+        provider: ContractProvider,
+        via: Sender,
         opts: {
             value: bigint;
             queryId: bigint;
             newOwnerAddress: Address;
-        }
-        ) { 
-            await provider.internal(via, {
-                value: opts.value,
-                sendMode: SendMode.PAY_GAS_SEPARATELY,
-                body: beginCell()
-                    .storeUint(3,32) //operation
-                    .storeUint(opts.queryId, 64)
-                    .storeAddress(opts.newOwnerAddress)
-                .endCell()
-            })
+        },
+    ) {
+        await provider.internal(via, {
+            value: opts.value,
+            sendMode: SendMode.PAY_GAS_SEPARATELY,
+            body: beginCell()
+                .storeUint(3, 32) //operation
+                .storeUint(opts.queryId, 64)
+                .storeAddress(opts.newOwnerAddress)
+                .endCell(),
+        });
     }
 
     // for offcahin content!
-    async getCollectionData(provider: ContractProvider): Promise<{nextItemId: number, ownerAddress: Address, collectionContent: string}>{
-        const collection_data = await provider.get("get_collection_data", []);
+    async getCollectionData(
+        provider: ContractProvider,
+    ): Promise<{ nextItemId: number; ownerAddress: Address; collectionContent: string }> {
+        const collection_data = await provider.get('get_collection_data', []);
         const stack = await collection_data.stack;
         let nextItem: bigint = stack.readBigNumber();
         let collectionContent = await stack.readCell();
         let ownerAddress = await stack.readAddress();
         return {
-            nextItemId: Number(nextItem), 
+            nextItemId: Number(nextItem),
             collectionContent: decodeOffChainContent(collectionContent),
-            ownerAddress: ownerAddress
+            ownerAddress: ownerAddress,
         };
     }
-
 }

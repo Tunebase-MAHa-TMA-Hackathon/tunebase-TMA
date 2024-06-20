@@ -23,8 +23,8 @@ describe('NftItem', () => {
                     id: 0,
                     counter: 0,
                 },
-                code
-            )
+                code,
+            ),
         );
 
         const deployer = await blockchain.treasury('deployer');

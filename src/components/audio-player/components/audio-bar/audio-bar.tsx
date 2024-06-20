@@ -1,5 +1,6 @@
 import { SyntheticEvent } from 'react';
 import { styled } from '@stitches/react';
+
 import { IListen } from '@/types/listen';
 
 import CloseIcon from '../../images/close.svg?react';

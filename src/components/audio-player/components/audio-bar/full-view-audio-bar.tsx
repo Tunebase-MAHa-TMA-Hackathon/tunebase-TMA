@@ -59,13 +59,12 @@ export const FullViewAudioBar = ({
 
   const { name, author, imageUrl } = currentSong;
 
-
   return (
     <div className="flex flex-col justify-between">
       <div className="flex items-center">
         {imageUrl ? (
           <div className="w-[88px] h-[88px] flex items-center justify-center brightness-50">
-            <img alt='img' src={imageUrl} className="w-full rounded-md" />
+            <img alt="img" src={imageUrl} className="w-full rounded-md" />
           </div>
         ) : null}
         <div className="ml-5">
