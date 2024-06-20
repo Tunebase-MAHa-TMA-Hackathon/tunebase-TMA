@@ -49,7 +49,7 @@ export const Event = () => {
   return (
     <div className="w-full relative text-white">
       <Link to={'/events'}>
-        <button className=" m-2 absolute z-10 w-[36px] h-[36px] rounded-[50%] bg-[#0098eb] flex items-center justify-center">
+        <button className=" m-2 absolute z-[5] w-[36px] h-[36px] rounded-[50%] bg-[#0098eb] flex items-center justify-center">
           <img alt={'<-'} className="w-[20px] h-[20px]" src={arrowLeft} />
         </button>
       </Link>
