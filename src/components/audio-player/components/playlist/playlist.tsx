@@ -28,7 +28,7 @@ export const Playlist = ({
                 currentIdAudio === index && 'flex items-center justify-center brightness-70',
               )}
             >
-              {imageUrl ? <img alt='img' src={imageUrl} className="rounded-md -z-10" /> : null}
+              {imageUrl ? <img alt="img" src={imageUrl} className="rounded-md -z-10" /> : null}
               {currentIdAudio === index ? <PauseIcon className="absolute my-0 mx-auto text-gray-900" /> : null}
             </div>
             <div className="ml-2.5">

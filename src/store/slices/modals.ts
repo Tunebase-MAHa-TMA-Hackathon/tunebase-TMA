@@ -17,7 +17,7 @@ const modalSlice = createSlice({
     },
     closeModal: (state, action: PayloadAction<string>) => {
       state[action.payload as keyof ModalState] = false;
-    }
+    },
   },
 });
 

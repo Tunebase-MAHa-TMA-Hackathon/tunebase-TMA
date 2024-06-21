@@ -1,9 +1,8 @@
 # TonTune Contrtacts
 
-Contracts are based on TEP62 and TEP66 standards. Particularly, there is a customized contract for NFT Collection and basic NFT item contract. 
+Contracts are based on TEP62 and TEP66 standards. Particularly, there is a customized contract for NFT Collection and basic NFT item contract.
 
 You can use the deployment and minting scripts, if you want to reproduce the on-chain flow manually. (see below)
-
 
 ## Project structure
 
