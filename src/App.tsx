@@ -13,17 +13,17 @@ import './index.css';
 function App() {
   return (
     <WagmiProvider>
-      <TanstackQueryProvider>
-        <BiconomyProvider>
-          <React.StrictMode>
-            <ReduxProvider>
-              <RouterProvider />
-            </ReduxProvider>
-          </React.StrictMode>
-        </BiconomyProvider>
-      </TanstackQueryProvider>
-    </WagmiProvider>
-  );
+            <TanstackQueryProvider>
+                <BiconomyProvider>
+                    <React.StrictMode>
+                        <ReduxProvider>
+                            <RouterProvider />
+                        </ReduxProvider>
+                    </React.StrictMode>
+                </BiconomyProvider>
+            </TanstackQueryProvider>
+        </WagmiProvider>
+    );
 }
 
 export default App;
