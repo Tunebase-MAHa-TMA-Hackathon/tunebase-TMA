@@ -1,23 +1,18 @@
-import { useTonAddress } from '@tonconnect/ui-react';
-import { Address } from 'ton';
-
 import nftItem from '@/assets/img/nfts/NFT-1.jpeg?url';
 import NFTCard from '@/components/cards/nft-card';
-import { mintNewNft } from '@/hooks/useNftContract';
+// TODO: Replace with BICO Stack
+/* import { mintNewNft } from '@/hooks/useNftContract';
 import { useTonClient } from '@/hooks/useTonClient';
-import { useTonConnect } from '@/hooks/useTonConnect';
+import { useTonConnect } from '@/hooks/useTonConnect'; */
 
 export function BuyNft() {
-  const rawAddress = useTonAddress();
-  const { client } = useTonClient();
-  const { sender } = useTonConnect();
-
   const mintNft = async () => {
-    if (client) {
+    /* if (client) {
       mintNewNft(client!, Address.parse(rawAddress), sender!);
     } else {
       alert('Please connect your Testnet wallet first');
-    }
+    } */
+    console.log('Minting NFT');
   };
 
   return (

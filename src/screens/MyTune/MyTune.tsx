@@ -24,7 +24,7 @@ export function MyTune() {
     if (tuneBalance > 20) {
       dispatch(decrease(tuneBalance));
 
-      toast(`🚀 You've minted TUNE tokens! Thanks for participating in Tontune demo`, {
+      toast(`🚀 You've minted TUNE tokens! Thanks for participating in Tunebase demo`, {
         position: 'top-center',
         autoClose: 5000,
         hideProgressBar: false,

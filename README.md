@@ -1,4 +1,4 @@
-# Tontune: Bridging Melodies to the Decentralized World 🎶🌐
+# Tunebase: Bridging Melodies to the Decentralized World 🎶🌐
 
 ## Table of Contents
 
@@ -11,27 +11,15 @@
 
 ## Introduction
 
-Tontune is a decentralized music streaming platform powered by the TON blockchain, aiming to create a peer-to-peer bridge between artists and listeners.
+Tunebase is a decentralized music streaming platform powered by the TON blockchain, aiming to create a peer-to-peer bridge between artists and listeners.
 
-Please note that this is an **alpha prototype** of Tontune. This early version is to provide a glimpse and working functionality of the platform. The final product may have significant differences, additional features, and polished user interfaces. Your feedback at this stage is invaluable to help us iterate and improve!
+Please note that this is an **alpha prototype** of Tunebase. This early version is to provide a glimpse and working functionality of the platform. The final product may have significant differences, additional features, and polished user interfaces. Your feedback at this stage is invaluable to help us iterate and improve!
 
 ## Getting Started
 
-### Steps to Launch Tontune via Telegram Bot
-
-Tontune can be easily accessed and interacted with via our Telegram Bot, providing a smooth and integrated user experience. Here’s how you can get started:
-
-1. **Navigate to the Tontune Bot:** Open your Telegram app and search for the Tontune Bot or simply click on this link: [TontuneBot](https://t.me/TontuneBot/Tontune).
-
-2. **Launch Tontune TWA:** Once you're on the Tontune Bot chat, find and press the "Tontune TWA" button to launch the Telegram Web App (TWA).
-
-### :exclamation:Important Note for Minting NFTs
-
-In order to mint NFTs on Tontune, it's essential to **connect your wallet to the testnet first**. Ensure that your wallet is set up, funded (for transactions and gas fees), and connected before attempting to mint an NFT.
-
 ### Running the Web App Locally
 
-To get Tontune running on your local machine, follow these steps:
+To get Tunebase running on your local machine, follow these steps:
 
 1. Ensure that you have `Node.js` and `npm` installed.
 
@@ -58,16 +46,6 @@ Artists and listeners can establish seamless interactions via wallets available 
 
 ## Technology Stack
 
-- **Blockchain:** TON
+- **Blockchain:** Base
 - **Front-end:** React.js + TypeScript + Tailwind CSS
-- **Smart Contracts:** FunC, Blueprint
-
-## Visuals
-
-<img src="https://res.cloudinary.com/do6yo1hx8/image/upload/v1696706255/IMG_8648_vvblzc.jpg" alt="Artist's Profile" width="250"/>
-<img src="https://res.cloudinary.com/do6yo1hx8/image/upload/v1696706260/IMG_8647_capow3.jpg" alt="Home Screen" width="250"/>
-<img src="https://res.cloudinary.com/do6yo1hx8/image/upload/v1696706249/IMG_8649_ewf2n9.jpg" alt="Purchase NFT" width="250"/>
-
-## Support
-
-In case of queries or support, feel free to reach out via [Telegram](https://t.me/k_sterio).
+- **Biconomy Stack**

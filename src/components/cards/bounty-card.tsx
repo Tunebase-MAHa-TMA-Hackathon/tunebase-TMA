@@ -33,7 +33,7 @@ const BountyCard = (props: {
                   style={{
                     height: `${100 / total}%`,
                     width: '100%',
-                    backgroundColor: idx < completed ? '#60A5FA' : 'transparent',
+                    backgroundColor: idx < completed ? '#FF914D' : 'transparent',
                     transition: 'background-color 0.3s ease-in-out',
                   }}
                 />

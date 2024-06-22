@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { TonConnectButton } from '@tonconnect/ui-react';
 import { twJoin } from 'tailwind-merge';
 
 import { Label } from '@/components/ui/label.tsx';
@@ -24,15 +23,11 @@ const Navbar = () => {
           </div>
 
           <div>
-            <Label className="font-normal text-base">
+            <Label className="font-normal text-base mr-5">
               💎&nbsp;Tunes: <span className="font-bold">{tuneBalance}</span>
             </Label>
           </div>
         </>
-
-        <div>
-          <TonConnectButton />
-        </div>
       </div>
     </nav>
   );

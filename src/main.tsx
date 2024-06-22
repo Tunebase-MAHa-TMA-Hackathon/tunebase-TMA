@@ -5,7 +5,7 @@ import pkg from '../package.json';
 
 import App from './App.tsx';
 
-console.log(`App: Tontune TMA | Version: ${pkg.version}`);
+console.log(`App: Tunebase TMA | Version: ${pkg.version}`);
 
 WebApp.ready();
 WebApp.expand();

@@ -72,7 +72,7 @@ export function Layout() {
 
       {showWelcomeAlert && (
         <Alert
-          customHeading="🎉 Welcome to Tontune! 🎶"
+          customHeading="🎉 Welcome to Tunebase! 🎶"
           type="success"
           text={
             <>
