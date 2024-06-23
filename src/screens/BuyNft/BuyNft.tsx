@@ -1,4 +1,4 @@
-import nftItem from '@/assets/img/nfts/NFT-1.jpeg';
+import nftItem from '@/assets/img/nfts/NFT-1.jpeg?url';
 import NFTCard from '@/components/cards/nft-card';
 // TODO: Replace with BICO Stack
 /* import { mintNewNft } from '@/hooks/useNftContract';
