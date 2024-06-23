@@ -65,7 +65,5 @@ export const WalletButton = () => {
             }
             classNames={'py-2 top-[36px] left-[25px] !origin-top-left w-max'}
         />
-
-
     );
 };

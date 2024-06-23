@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { twJoin } from 'tailwind-merge';
 
+import { WalletButton } from '@/components/buttons/wallet-button/wallet-button.tsx';
 import { Label } from '@/components/ui/label.tsx';
 import { RootState } from '@/store/reducer';
 
@@ -23,12 +24,16 @@ const Navbar = () => {
           </div>
 
           <div>
-            <Label className="font-normal text-base mr-5">
+            <Label className="font-normal text-base">
               💎&nbsp;Tunes: <span className="font-bold">{tuneBalance}</span>
             </Label>
           </div>
         </>
+
+          <WalletButton />
+
       </div>
+
     </nav>
   );
 };
