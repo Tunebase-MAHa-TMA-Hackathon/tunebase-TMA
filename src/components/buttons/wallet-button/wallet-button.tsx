@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { BiconomySmartAccountV2, createSmartAccountClient } from '@biconomy/account';
 import { createWalletClient, custom, WalletClient } from 'viem';
-import { mainnet } from 'viem/chains';
+import { goerli } from 'viem/chains';
 
 import Dropdown from '@/components/dropdown/dropdown.tsx';
 import { useTypedDispatch } from '@/store';
@@ -30,7 +30,7 @@ export const WalletButton = () => {
 
         const WC = createWalletClient({
                     account,
-                    chain: mainnet,
+                    chain: goerli,
                     transport: custom(window.ethereum),
                 })
 
