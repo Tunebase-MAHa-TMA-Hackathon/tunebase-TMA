@@ -6,12 +6,10 @@
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Technology Stack](#technology-stack)
-- [Visuals](#visuals)
-- [Support](#support)
 
 ## Introduction
 
-Tunebase is a decentralized music streaming platform powered by the TON blockchain, aiming to create a peer-to-peer bridge between artists and listeners.
+Tunebase is a decentralized music streaming platform powered by the Base blockchain & Biconomy AA, aiming to create a peer-to-peer bridge between artists and listeners.
 
 Please note that this is an **alpha prototype** of Tunebase. This early version is to provide a glimpse and working functionality of the platform. The final product may have significant differences, additional features, and polished user interfaces. Your feedback at this stage is invaluable to help us iterate and improve!
 
@@ -37,7 +35,7 @@ Our smart contract has been deployed on the testnet. This allows developers to i
 
 ### Web3 Integration
 
-Artists and listeners can establish seamless interactions via wallets available on TON (Ton Space, TonKeeper, TonHub, etc.).
+Artists and listeners can establish seamless interactions via wallets available on Base (e.g. Metamask).
 
 ### NFT Minting
 
@@ -46,6 +44,7 @@ Artists and listeners can establish seamless interactions via wallets available 
 
 ## Technology Stack
 
+- **Biconomy Stack**
 - **Blockchain:** Base
 - **Front-end:** React.js + TypeScript + Tailwind CSS
-- **Biconomy Stack**
+

@@ -18,9 +18,9 @@ interface ITicketCounts {
 type TicketType = 'standard' | 'vip' | 'meetAndGreet';
 
 const _TicketPrice = {
-  standard: '5 TON',
-  vip: '10 TON',
-  meetAndGreet: '25 TON',
+  standard: '5 USDC',
+  vip: '10 USDC',
+  meetAndGreet: '25 USDC',
 };
 
 export const Event = () => {

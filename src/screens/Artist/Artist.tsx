@@ -4,11 +4,9 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-// import { useTonAddress } from '@tonconnect/ui-react';
 import Card from '@/components/cards/card';
 import Loader from '@/components/loader/loader';
 import { Button } from '@/components/ui/button';
-// import { fetchItemsByAddress } from '@/hooks/TON_API.ts';
 import { useTypedDispatch } from '@/store';
 import { RootState } from '@/store/reducer';
 import { decrease, increase } from '@/store/slices/balance.ts';
@@ -17,7 +15,6 @@ import { IArtist } from '@/types/artist.ts';
 // import generatePlaylist from '@/utils/generatePlaylist.ts';
 
 export function Artist({ artistInfo }: { artistInfo: IArtist }) {
-  // const rawAddress = useTonAddress();
 
   const [isLoading, setIsLoading] = useState(false);
   // const [isMinted, setIsMinted] = useState(false);
@@ -225,7 +222,7 @@ export function Artist({ artistInfo }: { artistInfo: IArtist }) {
               <div>
                 <h3 className="text-navy-700 font-bold text-base dark:text-white">Ticketing:</h3>
                 <p className="text-sm font-normal text-gray-700">
-                  <strong>Standard Access:</strong> 20 TON
+                  <strong>Standard Access:</strong> 20 USDC
                 </p>
               </div>
             </div>
