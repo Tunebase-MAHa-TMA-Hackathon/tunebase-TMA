@@ -49,7 +49,7 @@ export const Event = () => {
   return (
     <div className="w-full relative text-white">
       <Link to={'/events'}>
-        <button className=" m-2 absolute z-[5] w-[36px] h-[36px] rounded-[50%] bg-[#0098eb] flex items-center justify-center">
+        <button className=" m-2 absolute z-[5] w-[36px] h-[36px] rounded-[50%] bg-button flex items-center justify-center">
           <img alt={'<-'} className="w-[20px] h-[20px]" src={arrowLeft} />
         </button>
       </Link>
@@ -102,7 +102,7 @@ export const Event = () => {
         <div className="flex gap-2 flex-col pt-2">
           {Object.entries(ticketCounts).map(([type, count]) => (
             <div key={type} className="flex justify-between h-[40px] text-black text-[12px] gap-2 pt-1">
-              <button className="w-[110px] text-start bg-sky-500 rounded-[10px] p-2 text-white">
+              <button className="w-[110px] text-start bg-button rounded-[10px] p-2 text-white">
                 {type.charAt(0).toUpperCase() + type.slice(1)}
               </button>
               <button className="w-[90px] rounded-[10px] p-2 bg-white">{_TicketPrice[type as TicketType]}</button>
@@ -125,9 +125,8 @@ export const Event = () => {
 
         <button
           onClick={() => alert('Tickets purchased!')}
-          className="bg-sky-500 rounded-[40px] w-[100%] h-[40px] gap-2 flex justify-center items-center mt-4 text-[14px]"
+          className="bg-button rounded-[40px] w-[100%] h-[40px] gap-2 flex justify-center items-center mt-4 text-[14px]"
         >
-          <img alt="buy" src={diamond} />
           <div>Buy Ticket</div>
         </button>
       </div>
