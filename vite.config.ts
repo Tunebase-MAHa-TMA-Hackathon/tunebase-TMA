@@ -10,7 +10,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 /// <reference types="vite-plugin-svgr/client" />
 export default defineConfig({
     plugins: [svgr(), react(), basicSsl(), nodePolyfills(), tsconfigPaths()],
-    base: 'https://tunebase.github.io/tunebase-telegram-web-app/',
+    base: 'https://tunebase-maha-tma-hackathon.github.io/tunebase-TMA/',
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
