@@ -62,7 +62,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: '/tunebase-telegram-web-app' },
+  { basename: '/tunebase-TMA' },
 );
 
 export const RouterProvider = () => <ReactRouterProvider router={router} />;
